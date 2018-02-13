@@ -28,3 +28,5 @@ var puzzlers = [
         return input % 4;
     }
 ];
+
+console.log(puzzlers);
