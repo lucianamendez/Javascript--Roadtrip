@@ -24,4 +24,23 @@ var fear = fearGenerated(people, rain, sharks);
 
 
 console.log(fear);
-console.log("The formula for fear: "+fearGenerated);
+console.log("The formula for fear: " + fearGenerated);
+
+var fearMessage = function () {
+    if (fear < 200) {
+        return confirm("Fear Level: LOW\nStill wanna ride?");
+    } else if (fear >= 200 && fear <= 300) {
+        return confirm("Fear Level: MEDIUM\nThink you'll make it?");
+    }
+};
+
+function confirm(message) {
+    return message;
+}
+
+function confirmRide(confirmToGo) {
+    return confirmToGo();
+}
+var startRide = confirmRide(fearMessage);
+
+console.log(startRide);
