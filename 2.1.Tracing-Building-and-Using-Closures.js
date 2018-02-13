@@ -66,3 +66,26 @@ var result = jumble(2); //so this is now mystery4(bonus) with 2 as bonus.
 
 console.log(result);
 //result is 122
+
+
+
+
+
+function warningMaker(obstacle) {
+    return function (number, location) {
+        console.log("Beware! There have been " + obstacle +
+            " sightings in the Cove today!\n" + number + " have been spotted at the " + location + "!"
+
+        );
+    };
+}
+
+var killerPenguinAlert = warningMaker("killer penguin");
+var polarBearAlert = warningMaker("polar bear");
+var icebergAlert = warningMaker("iceberg");
+var flashBlizzardAlert = warningMaker("flash blizzard");
+var snowYetiAlert = warningMaker("snow yeti");
+
+
+killerPenguinAlert(6, "Ice Caves");
+snowYetiAlert(1, "Blizzard Beach");
